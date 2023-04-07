@@ -47,3 +47,5 @@ app.*.map.json
 /android/app/release
 
 #api
+lib/api/coin_api.dart
+lib/api/supabase_credentials.dart
