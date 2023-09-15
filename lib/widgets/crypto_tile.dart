@@ -89,27 +89,31 @@ class CryptoTile extends StatelessWidget {
                     fontWeight: semiBold,
                   ),
                 ),
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  width: 64,
-                  height: 25,
-                  decoration: BoxDecoration(
-                    color: coin.change! < 0
-                        ? kRedColor.withOpacity(.10)
-                        : kGreenColor.withOpacity(.10),
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  child: Center(
-                    child: Text(
-                      coin.change! < 0 ? '${coin.change}%' : '+${coin.change}%',
-                      style: coin.change! < 0
-                          ? redTextStyle.copyWith(
-                              fontWeight: semiBold,
-                            )
-                          : greenTextStyle.copyWith(
-                              fontWeight: semiBold,
-                            ),
+                Expanded(
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    width: 64,
+                    height: 25,
+                    decoration: BoxDecoration(
+                      color: coin.change! < 0
+                          ? kRedColor.withOpacity(.10)
+                          : kGreenColor.withOpacity(.10),
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    child: Center(
+                      child: Text(
+                        coin.change! < 0
+                            ? '${coin.change}%'
+                            : '+${coin.change}%',
+                        style: coin.change! < 0
+                            ? redTextStyle.copyWith(
+                                fontWeight: semiBold,
+                              )
+                            : greenTextStyle.copyWith(
+                                fontWeight: semiBold,
+                              ),
+                      ),
                     ),
                   ),
                 ),
