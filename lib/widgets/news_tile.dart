@@ -51,14 +51,13 @@ class NewsTile extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
+                      maxLines: 2,
                       style: blackTextStyle.copyWith(
                         fontWeight: semiBold,
                         fontSize: 16,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 8,
                   ),
                   Row(
                     children: [

@@ -61,45 +61,42 @@ class NewsCard extends StatelessWidget {
                   color: kBlackColor.withOpacity(0.5),
                   child: Column(
                     children: [
-                      Expanded(
-                        child: Text(
-                          title,
-                          style: whiteTextStyle.copyWith(
-                            fontWeight: semiBold,
-                            fontSize: 18,
-                          ),
+                      Text(
+                        title,
+                        style: whiteTextStyle.copyWith(
+                          fontWeight: semiBold,
+                          fontSize: 18,
                         ),
                       ),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        children: [
-                          CircleTagNews(
-                            colorTag: circleColorTag,
-                          ),
-                          const SizedBox(
-                            width: 12,
-                          ),
-                          Text(
-                            tag,
-                            style: greyTextStyle,
-                          ),
-                          const SizedBox(
-                            width: 24,
-                          ),
-                          Text(
-                            time,
-                            style: greyTextStyle,
-                          ),
-                          const SizedBox(
-                            width: 24,
-                          ),
-                          Text(
-                            source,
-                            style: greyTextStyle,
-                          ),
-                        ],
+                      Expanded(
+                        child: Row(
+                          children: [
+                            CircleTagNews(
+                              colorTag: circleColorTag,
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Text(
+                              tag,
+                              style: greyTextStyle,
+                            ),
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            Text(
+                              time,
+                              style: greyTextStyle,
+                            ),
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            Text(
+                              source,
+                              style: greyTextStyle,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
