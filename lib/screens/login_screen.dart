@@ -201,25 +201,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 },
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 24),
-                child: Center(
-                  child: Text(
-                    'OR',
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
-                      fontWeight: semiBold,
-                    ),
-                  ),
-                ),
-              ),
-              CustomButton(
-                text: 'Login with Google',
-                bgColor: kBackgroundColor,
-                textStyle:
-                    blackTextStyle.copyWith(fontSize: 18, fontWeight: semiBold),
-                onTap: () {},
-              ),
+              // Container(
+              //   margin: const EdgeInsets.symmetric(vertical: 24),
+              //   child: Center(
+              //     child: Text(
+              //       'OR',
+              //       style: greyTextStyle.copyWith(
+              //         fontSize: 16,
+              //         fontWeight: semiBold,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // CustomButton(
+              //   text: 'Login with Google',
+              //   bgColor: kBackgroundColor,
+              //   textStyle:
+              //       blackTextStyle.copyWith(fontSize: 18, fontWeight: semiBold),
+              //   onTap: () {},
+              // ),
               const SizedBox(
                 height: 95,
               ),
