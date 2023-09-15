@@ -24,7 +24,7 @@ class BlurAppbar extends StatelessWidget {
               right: defaultMargin,
             ),
             width: MediaQuery.of(context).size.width,
-            height: 80,
+            height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,

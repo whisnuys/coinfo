@@ -18,88 +18,90 @@ class DetailNewsScreen extends StatelessWidget {
         “It could be a difficult weekend for crypto investors,” said David Russell, vice president of market intelligence at brokerage TradeStation Group. “The mid-May sell-off left some technical scars that may need time to heal. Bitcoin is under \$40,000 and dragging on the space.''';
 
     return Scaffold(
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 324,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/image_newsdetail.png',
+      body: SafeArea(
+        child: Stack(
+          children: [
+            SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 324,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/image_newsdetail.png',
+                        ),
+                        fit: BoxFit.cover,
                       ),
-                      fit: BoxFit.cover,
                     ),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.all(
-                    defaultMargin,
-                  ),
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Text(
-                        'Market Wrap: Bitcoin Slides to \$35K, ETH to \$2.4K on Biden',
-                        style: blackTextStyle.copyWith(
-                          fontWeight: semiBold,
-                          fontSize: 18,
+                  Container(
+                    margin: EdgeInsets.all(
+                      defaultMargin,
+                    ),
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        Text(
+                          'Market Wrap: Bitcoin Slides to \$35K, ETH to \$2.4K on Biden',
+                          style: blackTextStyle.copyWith(
+                            fontWeight: semiBold,
+                            fontSize: 18,
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      Row(
-                        children: [
-                          CircleTagNews(
-                            colorTag: kOrangeColor,
-                          ),
-                          const SizedBox(
-                            width: 12,
-                          ),
-                          Text(
-                            'BTC',
-                            style: greyTextStyle,
-                          ),
-                          const SizedBox(
-                            width: 24,
-                          ),
-                          Text(
-                            '15m ago',
-                            style: greyTextStyle,
-                          ),
-                          const SizedBox(
-                            width: 24,
-                          ),
-                          Text(
-                            'CoinDesk',
-                            style: greyTextStyle,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      Text(
-                        content,
-                        style: greyTextStyle,
-                        textAlign: TextAlign.justify,
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                    ],
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        Row(
+                          children: [
+                            CircleTagNews(
+                              colorTag: kOrangeColor,
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Text(
+                              'BTC',
+                              style: greyTextStyle,
+                            ),
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            Text(
+                              '15m ago',
+                              style: greyTextStyle,
+                            ),
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            Text(
+                              'CoinDesk',
+                              style: greyTextStyle,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        Text(
+                          content,
+                          style: greyTextStyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const BlurAppbar(),
-        ],
+            const BlurAppbar(),
+          ],
+        ),
       ),
     );
   }
